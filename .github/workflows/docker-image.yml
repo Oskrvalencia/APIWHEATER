@@ -1,0 +1,12 @@
+version: '3.3';
+
+services:
+  backend:
+    image: 'ovalencia08/backend'
+    build: '.'
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./public:/app/public
+    env_file:
+      - env.env
